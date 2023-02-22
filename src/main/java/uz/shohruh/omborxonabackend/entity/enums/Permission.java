@@ -1,0 +1,43 @@
+package uz.shohruh.omborxonabackend.entity.enums;
+
+public enum Permission { //huquqlar
+    //tizimga bog'liq bo'lgan ishlar(permissions)
+    ADD_USER, //ADMIN
+    EDIT_USER, //ADMIN
+    DELETE_USER,  //ADMIN
+    VIEW_USERS,  //ADMIN
+    ADD_ROLE,  //ADMIN
+    EDIT_ROLE, //ADMIN
+    DELETE_ROLE,  //ADMIN
+    VIEW_ROLE,   //ADMIN
+    //tizimdan tashqaridagi ishlar
+    ADD_WAREHOUSE,  //ADMIN
+    EDIT_WAREHOUSE, //ADMIN
+    DELETE_WAREHOUSE, //ADMIN
+    VIEW_WAREHOUSE,
+    ADD_CATEGORY,  //ADMIN
+    EDIT_CATEGORY, //ADMIN
+    DELETE_CATEGORY, //ADMIN
+    VIEW_CATEGORY,
+    ADD_CLIENT,  //ADMIN
+    EDIT_CLIENT, //ADMIN
+    DELETE_CLIENT, //ADMIN
+    VIEW_CLIENT,
+    ADD_CURRENCY,  //ADMIN
+    EDIT_CURRENCY, //ADMIN
+    DELETE_CURRENCY, //ADMIN
+    VIEW_CURRENCY,
+    ADD_MEASUREMENT,  //ADMIN
+    EDIT_MEASUREMENT, //ADMIN
+    DELETE_MEASUREMENT, //ADMIN
+    VIEW_MEASUREMENT,
+    ADD_PRODUCT,  //ADMIN
+    EDIT_PRODUCT, //ADMIN
+    DELETE_PRODUCT, //ADMIN
+    VIEW_PRODUCT,
+    ADD_SUPPLIER,  //ADMIN
+    EDIT_SUPPLIER, //ADMIN
+    DELETE_SUPPLIER, //ADMIN
+    VIEW_SUPPLIER,
+
+}
