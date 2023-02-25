@@ -53,7 +53,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/auth/**",
                         "/api/warehouse/**",
                         "/api/category/**",
-                        "/api/product")
+                        "/api/product**",
+                        "/api/measurement**")
                 .permitAll()
                 .anyRequest()
                 .authenticated();

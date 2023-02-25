@@ -12,6 +12,7 @@ import uz.shohruh.omborxonabackend.service.ProductService;
 
 @RestController
 @RequestMapping("/api/product")
+@CrossOrigin("http://localhost:3000")
 public class ProductController {
     @Autowired
     ProductService productService;

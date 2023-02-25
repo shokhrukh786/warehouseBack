@@ -13,19 +13,20 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/measurement")
+@CrossOrigin("http://localhost:3000")
 public class MeasurementController {
     @Autowired
     MeasurementService measurementService;
 
 
-    @PreAuthorize(value = "hasAuthority('ADD_MEASUREMENT')")
+//    @PreAuthorize(value = "hasAuthority('ADD_MEASUREMENT')")
     @PostMapping
     public HttpEntity<?> addMeasurement(@Valid @RequestBody MeasurementDTO measurementDTO){
         ApiResponse apiResponse = measurementService.addMeasurement(measurementDTO);
         return ResponseEntity.status(apiResponse.isSuccess()?200:409).body(apiResponse);
     }
 
-    @PreAuthorize(value = "hasAuthority('EDIT_MEASUREMENT')")
+//    @PreAuthorize(value = "hasAuthority('EDIT_MEASUREMENT')")
     @PutMapping ("/{id}")
     public HttpEntity<?> editMeasurement(@Valid @RequestBody MeasurementDTO measurementDTO,
                                          @PathVariable Long id){
@@ -33,21 +34,21 @@ public class MeasurementController {
         return ResponseEntity.status(apiResponse.isSuccess()?200:409).body(apiResponse);
     }
 
-    @PreAuthorize(value = "hasAuthority('DELETE_MEASUREMENT')")
+//    @PreAuthorize(value = "hasAuthority('DELETE_MEASUREMENT')")
     @DeleteMapping("/{id}")
     public HttpEntity<?> deleteMeasurement(@PathVariable Long id){
         ApiResponse apiResponse = measurementService.deleteMeasurement(id);
         return ResponseEntity.status(apiResponse.isSuccess()?200:409).body(apiResponse);
     }
 
-    @PreAuthorize(value = "hasAuthority('VIEW_MEASUREMENT')")
+//    @PreAuthorize(value = "hasAuthority('VIEW_MEASUREMENT')")
     @GetMapping("/{id}")
     public HttpEntity<?> getById(@PathVariable Long id){
         ApiResponse apiResponse = measurementService.getById(id);
         return ResponseEntity.status(apiResponse.isSuccess()?200:409).body(apiResponse);
     }
 
-    @PreAuthorize(value = "hasAuthority('VIEW_MEASUREMENT')")
+//    @PreAuthorize(value = "hasAuthority('VIEW_MEASUREMENT')")
     @GetMapping
     public HttpEntity<?> getAll(){
         ApiResponse apiResponse = measurementService.getAll();
